@@ -1,1 +1,2 @@
-Functions for complex numbers
+0x00. Math - Complex
+Math functions

@@ -24,11 +24,14 @@ void display_complex_number(complex c)
 				printf("%0.f + %0.fi\n", c.re, c.im);
 		}
 		else if (c.re > 0 && c.im < 0)
-			printf("%0.f - %0.fi\n", c.re, (-1) * c.im);
+			if (c.im == -1)
+				printf("%0.f - i\n", c.re);
+			else
+				printf("%0.f - %0.fi\n", c.re, (-1) * c.im);
 		else if (c.re < 0 && c.im > 0)
 			printf("-%0.f + %0.fi\n", (-1) *  c.re, c.im);
 		else if (c.re < 0 && c.im < 0)
-			printf("-%0.f - %0.fi\n", (-1) * c.re,  (-1) * c.im)
+			printf("-%0.f - %0.fi\n", (-1) * c.re,  (-1) * c.im);
 	}
 	else if (c.re == 0 || c.im == 0)
 	{
